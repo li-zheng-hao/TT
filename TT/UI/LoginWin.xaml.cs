@@ -32,11 +32,9 @@ namespace TT.UI
         /// <param name="e"></param>
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            Page1 page=new Page1();
+            RegisterWin regist=new RegisterWin();
             
-            NavigationWindow window = new NavigationWindow();
-            window.Source = new Uri("/UI/Page1.xaml", UriKind.Relative);
-            window.Show();
+            regist.Show();
             
         }
 

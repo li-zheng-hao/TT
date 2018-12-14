@@ -75,6 +75,7 @@
             <Button
                 Width="150"
                 Margin="50,20,50,0"
+                BorderThickness="1"
                 Click="Login_Click"
                 Content="登 录"
                 FontFamily="Yu Gothic UI"
@@ -82,6 +83,7 @@
             <Button
                 Width="150"
                 Margin="50,20,50,10"
+                BorderThickness="1"
                 Click="Register_Click"
                 Content="注 册"
                 FontFamily="Yu Gothic UI"

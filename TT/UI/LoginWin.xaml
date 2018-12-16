@@ -5,28 +5,30 @@
     xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Width="300"
     Height="350"
+    Background="{DynamicResource MaterialDesignPaper}"
     BorderThickness="0"
+    FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
     GlowBrush="Black"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     WindowTransitionsEnabled="False"
     mc:Ignorable="d">
     <Grid>
-        <StackPanel
-            Grid.Row="0"
-            Grid.Column="1"
-            Margin="20,10,20,10">
+        <StackPanel Grid.Row="0" Margin="20,10,20,10">
             <Label
+                Margin="0,0,0,20"
                 Content="TT Talk"
+                FontSize="28"
                 FontStyle="Italic"
                 FontWeight="Bold"
+                Foreground="LightBlue"
                 Style="{DynamicResource DescriptionHeaderStyle}" />
             <controls:MetroHeader
                 Margin="10,10,10,10"
-                FontFamily="Yu Gothic UI"
                 Header="手机号或邮箱"
                 Opacity="0.5">
                 <controls:MetroHeader.HeaderTemplate>
@@ -40,6 +42,7 @@
                         </StackPanel>
                     </DataTemplate>
                 </controls:MetroHeader.HeaderTemplate>
+                <!-- <TextBox Style="{DynamicResource MaterialDesignTextBox}" /> -->
                 <TextBox SpellCheck.IsEnabled="True">
                     <TextBox.ContextMenu>
                         <ContextMenu>
@@ -50,7 +53,6 @@
             </controls:MetroHeader>
             <controls:MetroHeader
                 Margin="10,10,10,10"
-                FontFamily="Yu Gothic UI"
                 Header="密码"
                 Opacity="0.5">
                 <controls:MetroHeader.HeaderTemplate>
@@ -77,8 +79,8 @@
                 Margin="50,20,50,0"
                 BorderThickness="1"
                 Click="Login_Click"
-                Content="登 录"
-                FontFamily="Yu Gothic UI"
+                Content="{Binding Path=}"
+                
                 Style="{DynamicResource AccentedSquareButtonStyle}" />
             <Button
                 Width="150"
@@ -86,8 +88,8 @@
                 BorderThickness="1"
                 Click="Register_Click"
                 Content="注 册"
-                FontFamily="Yu Gothic UI"
                 Style="{DynamicResource SquareButtonStyle}" />
+
         </StackPanel>
 
 

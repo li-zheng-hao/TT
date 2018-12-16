@@ -14,6 +14,7 @@ namespace TT.UI
 
         private void Return_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            
             this.Close();
         }
     }

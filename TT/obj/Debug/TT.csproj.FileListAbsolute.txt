@@ -26,3 +26,12 @@ E:\TT\TT\bin\Debug\MahApps.Metro.IconPacks.pdb
 E:\TT\TT\bin\Debug\MahApps.Metro.IconPacks.xml
 E:\TT\TT\obj\Debug\UI\RegisterWin.g.cs
 E:\TT\TT\obj\Debug\UI\RegisterWin.baml
+E:\TT\TT\obj\Debug\UI\MainWin.g.cs
+E:\TT\TT\obj\Debug\UI\MainWin.baml
+E:\TT\TT\bin\Debug\MaterialDesignColors.dll
+E:\TT\TT\bin\Debug\MaterialDesignThemes.MahApps.dll
+E:\TT\TT\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\TT\TT\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\TT\TT\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\TT\TT\obj\Debug\UI\ChatWin.g.cs
+E:\TT\TT\obj\Debug\UI\ChatWin.baml

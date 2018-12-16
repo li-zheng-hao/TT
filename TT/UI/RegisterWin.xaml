@@ -10,7 +10,7 @@
     Width="300"
     Height="550"
     BorderThickness="0"
-    FontFamily="Yu Gothic UI"
+    FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
     FontStyle="Italic"
     GlowBrush="Black"
     ResizeMode="NoResize"

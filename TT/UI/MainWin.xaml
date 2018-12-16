@@ -1,0 +1,184 @@
+﻿<controls:MetroWindow
+    x:Class="TT.UI.MainWin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:TT.UI"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="TT"
+    Width="300"
+    Height="550"
+    BorderThickness="0"
+    FontFamily="Yu Gothic UI"
+    FontStyle="Italic"
+    GlowBrush="Black"
+    ResizeMode="CanMinimize"
+    ShowMinButton="true"
+    ShowSystemMenuOnRightClick="true"
+    ShowTitleBar="true"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+
+            <Border
+                x:Name="Border"
+                Padding="8"
+                BorderBrush="{DynamicResource AccentBaseColorBrush}"
+                BorderThickness="0,0,0,3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <ToggleButton
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Content="{iconPacks:Modern User}"
+                        IsChecked="{Binding IsSelected}"
+                        Style="{StaticResource MaterialDesignActionLightToggleButton}" />
+                    <StackPanel
+                        Grid.Column="1"
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Right">
+                        <TextBlock FontWeight="Bold" Text="王二麻子" />
+                        <TextBlock Text="他什么都没有留下" />
+                    </StackPanel>
+
+                </Grid>
+            </Border>
+            <materialDesign:DialogHost
+                Width="297"
+                Height="471"
+                Margin="0,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <materialDesign:DialogHost.DialogContent>
+                    <StackPanel Margin="0">
+                        <TextBlock>
+                            Add a new fruit.
+                        </TextBlock>
+                        <TextBox
+                            x:Name="FruitTextBox"
+                            Margin="0,8,0,0"
+                            HorizontalAlignment="Stretch" />
+                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                            <Button
+                                Margin="0,8,8,0"
+                                Command="materialDesign:DialogHost.CloseDialogCommand"
+                                IsDefault="True"
+                                Style="{StaticResource MaterialDesignFlatButton}">
+                                <Button.CommandParameter>
+                                    <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                        True
+                                    </system:Boolean>
+                                </Button.CommandParameter>
+                                ACCEPT
+                            </Button>
+                            <Button
+                                Margin="0,8,8,0"
+                                Command="materialDesign:DialogHost.CloseDialogCommand"
+                                IsCancel="True"
+                                Style="{StaticResource MaterialDesignFlatButton}">
+                                <Button.CommandParameter>
+                                    <system:Boolean xmlns:system="clr-namespace:System;assembly=mscorlib">
+                                        False
+                                    </system:Boolean>
+                                </Button.CommandParameter>
+                                CANCEL
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </materialDesign:DialogHost.DialogContent>
+                <Border ClipToBounds="True">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ListBox x:Name="FriendsList" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <ListBoxItem>
+                                好友1号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友2号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友3号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友4号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                好友5号
+                            </ListBoxItem>
+                        </ListBox>
+                        <materialDesign:ColorZone
+                            Grid.Row="1"
+                            Effect="{DynamicResource MaterialDesignShadowDepth5}"
+                            Mode="PrimaryMid">
+                            <TextBlock Margin="16">
+                                好友列表
+                            </TextBlock>
+                        </materialDesign:ColorZone>
+                        <Button
+                            Grid.Row="0"
+                            Margin="0,0,28,-20"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Click="ButtonBase_OnClick"
+                            Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
+                            <materialDesign:PackIcon
+                                Width="22"
+                                Height="22"
+                                Kind="Plus" />
+                        </Button>
+                    </Grid>
+                </Border>
+            </materialDesign:DialogHost>
+
+
+
+        </StackPanel>
+
+    </Grid>
+</controls:MetroWindow>

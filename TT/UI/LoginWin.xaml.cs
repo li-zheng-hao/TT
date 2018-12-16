@@ -32,10 +32,11 @@ namespace TT.UI
         /// <param name="e"></param>
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            RegisterWin regist=new RegisterWin();
             
-            regist.Show();
-            
+            MainWin main = new MainWin();
+            main.Show();
+            Close();
+
         }
 
         /// <summary>
@@ -45,7 +46,9 @@ namespace TT.UI
         /// <param name="e"></param>
         private void Register_Click(object sender, RoutedEventArgs e)
         {
+            RegisterWin regist = new RegisterWin();
 
+            regist.Show();
         }
     }
 }

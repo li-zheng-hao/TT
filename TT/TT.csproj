@@ -80,16 +80,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UI\ChatWin.xaml.cs">
+    <Compile Include="Window\ChatWin.xaml.cs">
       <DependentUpon>ChatWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\LoginWin.xaml.cs">
+    <Compile Include="Window\LoginWin.xaml.cs">
       <DependentUpon>LoginWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\MainWin.xaml.cs">
+    <Compile Include="Window\MainWin.xaml.cs">
       <DependentUpon>MainWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\RegisterWin.xaml.cs">
+    <Compile Include="Window\RegisterWin.xaml.cs">
       <DependentUpon>RegisterWin.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -122,23 +122,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="UI\ChatWin.xaml">
+    <Page Include="Window\ChatWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UI\LoginWin.xaml">
+    <Page Include="Window\LoginWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UI\MainWin.xaml">
+    <Page Include="Window\MainWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UI\RegisterWin.xaml">
+    <Page Include="Window\RegisterWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

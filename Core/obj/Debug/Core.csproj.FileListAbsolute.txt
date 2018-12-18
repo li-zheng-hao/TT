@@ -1,0 +1,10 @@
+E:\TT\Core\bin\Debug\Core.dll
+E:\TT\Core\bin\Debug\Core.pdb
+E:\TT\Core\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+E:\TT\Core\bin\Debug\Microsoft.IO.RecyclableMemoryStream.pdb
+E:\TT\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+E:\TT\Core\obj\Debug\Core.csproj.CopyComplete
+E:\TT\Core\obj\Debug\Core.dll
+E:\TT\Core\obj\Debug\Core.pdb
+E:\TT\Core\bin\Debug\protobuf-net.dll
+E:\TT\Core\obj\Debug\Core.csprojAssemblyReference.cache

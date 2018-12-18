@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\DAO\AccountDAO.cs" />
+    <Compile Include="DB\DBHelper.cs" />
+    <Compile Include="DB\Model\Account.cs" />
     <Compile Include="Handler\IHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Program.cs" />
@@ -58,8 +61,6 @@
       <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DB\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,8 +13,8 @@ namespace Core
             var client = new ClientTestDemo();
             LoginMessage ms = new LoginMessage()
             {
-                UserName = "lizhenghao",
-                Password = "123"
+                Email = "1263212577@qq.com",
+                Password = "123456"
             };
 
             while (true)
@@ -26,8 +26,12 @@ namespace Core
      
         private void OnRead(ushort opCode, MemoryStream messageStream, Session session)
         {
-            var rm=ProtobufHelper.FromStream(typeof(ResponseMessage), messageStream) as ResponseMessage;
-            Console.WriteLine($"客户端收到服务端发来的消息，操作码为{opCode},消息内容为{rm.Message}");
+            var ms=ProtobufHelper.FromStream(typeof(LoginMessage), messageStream) as LoginMessage;
+
+            if (ms.Message=="Y")
+            {
+                Console.WriteLine($"登录成功，当前用户名字为{ms.Username}");
+            }
         }
 
         public ClientTestDemo()

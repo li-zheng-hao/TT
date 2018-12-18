@@ -1,0 +1,13 @@
+E:\TT\TTServer\bin\Release\TTServer.exe.config
+E:\TT\TTServer\bin\Release\TTServer.exe
+E:\TT\TTServer\bin\Release\TTServer.pdb
+E:\TT\TTServer\bin\Release\Core.dll
+E:\TT\TTServer\bin\Release\protobuf-net.dll
+E:\TT\TTServer\bin\Release\Microsoft.IO.RecyclableMemoryStream.dll
+E:\TT\TTServer\bin\Release\Core.pdb
+E:\TT\TTServer\bin\Release\Microsoft.IO.RecyclableMemoryStream.pdb
+E:\TT\TTServer\obj\Release\TTServer.csprojAssemblyReference.cache
+E:\TT\TTServer\obj\Release\TTServer.csproj.CoreCompileInputs.cache
+E:\TT\TTServer\obj\Release\TTServer.csproj.CopyComplete
+E:\TT\TTServer\obj\Release\TTServer.exe
+E:\TT\TTServer\obj\Release\TTServer.pdb

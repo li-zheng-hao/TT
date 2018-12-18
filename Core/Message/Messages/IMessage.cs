@@ -7,7 +7,7 @@ namespace Core
     {
 
     }
-    
+   
     [ProtoContract]
     public class ResponseMessage : IMessage
     {

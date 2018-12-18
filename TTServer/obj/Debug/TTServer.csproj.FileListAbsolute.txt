@@ -1,3 +1,5 @@
+E:\TT\TTServer\obj\Debug\TTServer.csprojAssemblyReference.cache
+E:\TT\TTServer\obj\Debug\TTServer.csproj.CoreCompileInputs.cache
 E:\TT\TTServer\bin\Debug\TTServer.exe.config
 E:\TT\TTServer\bin\Debug\TTServer.exe
 E:\TT\TTServer\bin\Debug\TTServer.pdb
@@ -6,8 +8,6 @@ E:\TT\TTServer\bin\Debug\protobuf-net.dll
 E:\TT\TTServer\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
 E:\TT\TTServer\bin\Debug\Core.pdb
 E:\TT\TTServer\bin\Debug\Microsoft.IO.RecyclableMemoryStream.pdb
-E:\TT\TTServer\obj\Debug\TTServer.csprojAssemblyReference.cache
-E:\TT\TTServer\obj\Debug\TTServer.csproj.CoreCompileInputs.cache
 E:\TT\TTServer\obj\Debug\TTServer.csproj.CopyComplete
 E:\TT\TTServer\obj\Debug\TTServer.exe
 E:\TT\TTServer\obj\Debug\TTServer.pdb

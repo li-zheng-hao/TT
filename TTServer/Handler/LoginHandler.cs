@@ -8,18 +8,35 @@ namespace TTServer
         public void HandleMessage(MemoryStream memoryStream, Session session)
         {
             var login = ProtobufHelper.FromStream(typeof(LoginMessage), memoryStream) as LoginMessage;
-            //todo 这里验证用户是否存在,先假设存在
-            ResponseMessage rm = new ResponseMessage()
+            var conn = DBHelper.Instance.GetConnection();
+            AccountDAO dao = new AccountDAO();
+            LoginMessage ms = new LoginMessage();
+            if (login==null)
             {
-                Message = "Y",
-                RpcId = OperationCode.Response
-            };
-            ResponseMessage(rm,session);
+                ms.Message = "N";
+            }
+            else
+            {
+                Account result = dao.VerifyAccount(conn, login.Email, login.Password, null);
+                if (result==null)
+                {
+                    ms.Message = "N";
+                }
+                else
+                {
+                    ms.Message = "Y";
+                    ms.Username = result.UserName;
+                    ms.Password = result.Password;
+                    ms.Email = result.Email;
+                    ms.Phone = result.Phone;
+                }
+            }
+            ResponseMessage(ms, session);
         }
 
         public void ResponseMessage(IMessage msg, Session session)
         {
-            session.Send(OperationCode.Response,msg);
+            session.Send(OperationCode.Login,msg);
         }
     }
 }

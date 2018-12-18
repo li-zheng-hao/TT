@@ -43,7 +43,7 @@
                     </DataTemplate>
                 </controls:MetroHeader.HeaderTemplate>
                 <!-- <TextBox Style="{DynamicResource MaterialDesignTextBox}" /> -->
-                <TextBox SpellCheck.IsEnabled="True">
+                <TextBox x:Name="UserNameTextBox" SpellCheck.IsEnabled="True">
                     <TextBox.ContextMenu>
                         <ContextMenu>
                             <MenuItem Header="This is only a Test-Item" />
@@ -66,7 +66,7 @@
                         </StackPanel>
                     </DataTemplate>
                 </controls:MetroHeader.HeaderTemplate>
-                <PasswordBox>
+                <PasswordBox x:Name="PasswordBox">
                     <PasswordBox.ContextMenu>
                         <ContextMenu>
                             <MenuItem Header="This is only a Test-Item" />
@@ -75,17 +75,17 @@
                 </PasswordBox>
             </controls:MetroHeader>
             <Button
+                x:Name="LoginBtn"
                 Width="150"
                 Margin="50,20,50,0"
                 BorderThickness="1"
-                Click="Login_Click"
                 Content="登 录"
                 Style="{DynamicResource AccentedSquareButtonStyle}" />
             <Button
+                x:Name="RegisterBtn"
                 Width="150"
                 Margin="50,20,50,10"
                 BorderThickness="1"
-                Click="Register_Click"
                 Content="注 册"
                 Style="{DynamicResource SquareButtonStyle}" />
 

@@ -35,3 +35,8 @@ E:\TT\TT\obj\Debug\TT.csproj.CoreCompileInputs.cache
 E:\TT\TT\obj\Debug\TT.csproj.CopyComplete
 E:\TT\TT\obj\Debug\TT.exe
 E:\TT\TT\obj\Debug\TT.pdb
+E:\TT\TT\bin\Debug\Core.dll
+E:\TT\TT\bin\Debug\protobuf-net.dll
+E:\TT\TT\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+E:\TT\TT\bin\Debug\Core.pdb
+E:\TT\TT\bin\Debug\Microsoft.IO.RecyclableMemoryStream.pdb

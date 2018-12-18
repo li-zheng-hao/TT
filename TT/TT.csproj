@@ -80,6 +80,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Network\Handler\IHandler.cs" />
+    <Compile Include="Network\Handler\LoginHandler.cs" />
+    <Compile Include="Network\NetworkManager.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="Window\ChatWin.xaml.cs">
       <DependentUpon>ChatWin.xaml</DependentUpon>
     </Compile>
@@ -141,7 +145,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{4e0dbc28-f438-44c4-8a4a-0caf8edfff96}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

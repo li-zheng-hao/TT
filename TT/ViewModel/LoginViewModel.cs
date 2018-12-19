@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using Core;
 using MahApps.Metro.Controls.Dialogs;
@@ -9,6 +10,7 @@ namespace TT
     public class LoginViewModel
     {
         private LoginWin loginWin;
+
 
         public LoginViewModel(LoginWin loginWin)
         {
@@ -37,7 +39,8 @@ namespace TT
         {
 
             var networkManager = NetworkManager.GetInstance;
-            networkManager.LoginCallBack += LoginCallBack;
+            if(networkManager.LoginCallBack==null)
+                networkManager.LoginCallBack += LoginCallBack;
             LoginMessage msg = new LoginMessage()
             {
                 Email = loginWin.UserNameTextBox.Text,
@@ -52,6 +55,7 @@ namespace TT
         /// <param name="message"></param>
         private  void LoginCallBack(IMessage message)
         {
+
             var login = message as LoginMessage;
             if (login.Message.Equals("Y"))
             {
@@ -64,23 +68,17 @@ namespace TT
             }
             else
             {
-                App.Current.Dispatcher.Invoke((Action)(() =>
+                App.Current.Dispatcher.Invoke((Action)(async () =>
                 {
-
-                    // This demo runs on .Net 4.0, but we're using the Microsoft.Bcl.Async package so we have async/await support
-                    // The package is only used by the demo and not a dependency of the library!
-                    var mySettings = new MetroDialogSettings()
-                    {
-                        AffirmativeButtonText = "错误",
-                        NegativeButtonText = "Go away!",
-                        FirstAuxiliaryButtonText = "Cancel",
-                    };
-
-                    this.loginWin.ShowMessageAsync("错误", "账号密码错误",
+//                    var mySettings = new MetroDialogSettings()
+//                    {
+//                        AffirmativeButtonText = "错误",
+//                        NegativeButtonText = "Go away!",
+//                        FirstAuxiliaryButtonText = "Cancel",
+//                    };
+                    await this.loginWin.ShowMessageAsync("", "账号或密码错误",
                         MessageDialogStyle.Affirmative, null);
-//                    MessageDialogStyle.AffirmativeAndNegativeAndSingleAuxiliary
-
-
+                    this.loginWin.PasswordBox.Password = "";
                 }));
             }
         }

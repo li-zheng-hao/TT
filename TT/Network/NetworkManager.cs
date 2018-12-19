@@ -13,7 +13,11 @@ namespace TT
         public TService service;
         private Session session;
 
+        #region 回调方法
+
         public Action<IMessage> LoginCallBack;
+        public Action<IMessage> RegisterCallBack;
+        #endregion
 
         private void OnRead(ushort opCode, MemoryStream messageStream, Session session)
         {
@@ -21,6 +25,9 @@ namespace TT
             {
                 case OperationCode.Login:
                     new LoginHandler().HandlerMessage(messageStream, session);
+                    break;
+                case OperationCode.Register:
+                    new RegisterHandler().HandlerMessage(messageStream,session);
                     break;
             }
             

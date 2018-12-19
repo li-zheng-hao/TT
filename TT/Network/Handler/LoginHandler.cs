@@ -9,7 +9,6 @@ namespace TT
         {
             var login = ProtobufHelper.FromStream(typeof(LoginMessage), memoryStream) as LoginMessage;
             NetworkManager.GetInstance.LoginCallBack?.Invoke(login);
-            
         }
     }
 }

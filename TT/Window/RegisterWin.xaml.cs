@@ -10,12 +10,9 @@ namespace TT.Window
         public RegisterWin()
         {
             InitializeComponent();
+            RegisterViewModel rm=new RegisterViewModel(this);
         }
 
-        private void Return_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            
-            this.Close();
-        }
+     
     }
 }

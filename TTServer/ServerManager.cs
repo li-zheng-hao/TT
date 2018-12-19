@@ -66,6 +66,9 @@ namespace TTServer
                 case OperationCode.Login:
                     new LoginHandler().HandleMessage(message, session);
                     break;
+                case OperationCode.Register:
+                    new RegisterHandler().HandleMessage(message,session);
+                    break;
                 default:
                     Console.WriteLine($"没有办法处理操作码{opCode}");
                     break;

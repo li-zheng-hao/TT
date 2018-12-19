@@ -11,3 +11,7 @@ E:\TT\TTServer\bin\Debug\Microsoft.IO.RecyclableMemoryStream.pdb
 E:\TT\TTServer\obj\Debug\TTServer.csproj.CopyComplete
 E:\TT\TTServer\obj\Debug\TTServer.exe
 E:\TT\TTServer\obj\Debug\TTServer.pdb
+E:\TT\TTServer\bin\Debug\TTServer.exe.manifest
+E:\TT\TTServer\bin\Debug\TTServer.application
+E:\TT\TTServer\obj\Debug\TTServer.exe.manifest
+E:\TT\TTServer\obj\Debug\TTServer.application

@@ -185,8 +185,8 @@ namespace Core
             if (e.SocketError != SocketError.Success)
             {
 
-                e?.ConnectSocket.Disconnect(true);
-                this.OnError((int)e.SocketError);
+                e?.ConnectSocket?.Close();
+                this.GetService().Remove(this.Id);
                 return;
             }
 
@@ -240,7 +240,9 @@ namespace Core
 
             if (e.SocketError != SocketError.Success)
             {
-                Console.WriteLine("报错了，可能是用户断开连接了");
+                e?.ConnectSocket?.Close();
+                Console.WriteLine("错误号为"+e.SocketError.ToString());
+                
                 this.OnError((int)e.SocketError);
                 return;
             }

@@ -83,7 +83,7 @@ namespace Core
             switch (e.LastOperation)
             {
                 case SocketAsyncOperation.Accept:
-                    OneThreadSynchronizationContext.Instance.Post(this.OnAcceptComplete, e);
+                    OnAcceptComplete(e);
                     break;
                 default:
                     throw new Exception($"socket accept error: {e.LastOperation}");

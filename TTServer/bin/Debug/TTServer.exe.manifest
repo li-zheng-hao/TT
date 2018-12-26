@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Core.dll" size="28672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Core.dll" size="29696">
       <assemblyIdentity name="Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>l/rORSRquRCYWS9oI7flgQEhDZj6DyCLeDgi4Ku82xs=</dsig:DigestValue>
+        <dsig:DigestValue>nP08k54SUxo0jP9UR1gWhZNa+vuCwUP/T1cQPz/JOrE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TTServer.exe" size="12288">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TTServer.exe" size="14336">
       <assemblyIdentity name="TTServer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lyQFM3rlwKiA9gG0sPJZBX2Wad1/D8f5wsUA0M3KNpI=</dsig:DigestValue>
+        <dsig:DigestValue>WJjTwU/N71hcR5ytVTDt3Ae1WYL0XT9NN6s/IM7aFl4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

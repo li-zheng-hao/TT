@@ -25,6 +25,7 @@ namespace TTServer
                 else
                 {
                     ms.Message = "Y";
+                    ms.Id = result.Id;
                     ms.Username = result.UserName;
                     ms.Password = result.Password;
                     ms.Email = result.Email;

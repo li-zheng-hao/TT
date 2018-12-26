@@ -7,3 +7,4 @@ E:\TT\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
 E:\TT\Core\obj\Debug\Core.csproj.CopyComplete
 E:\TT\Core\obj\Debug\Core.dll
 E:\TT\Core\obj\Debug\Core.pdb
+E:\TT\Core\obj\Debug\Core.csprojAssemblyReference.cache

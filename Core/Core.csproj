@@ -57,9 +57,11 @@
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Helper\TimeHelper.cs" />
     <Compile Include="Message\ErrorCode.cs" />
+    <Compile Include="Message\Messages\AddFriendMessage.cs" />
     <Compile Include="Message\Messages\FriendListMessage.cs" />
     <Compile Include="Message\Messages\IMessage.cs" />
     <Compile Include="Message\Messages\LoginMessage.cs" />
+    <Compile Include="Message\Messages\Person.cs" />
     <Compile Include="Message\Messages\RegisterMessage.cs" />
     <Compile Include="Message\Network\AChannel.cs" />
     <Compile Include="Message\Network\AService.cs" />

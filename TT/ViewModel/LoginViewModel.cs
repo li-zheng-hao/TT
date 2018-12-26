@@ -11,7 +11,7 @@ namespace TT
     {
         private LoginWin loginWin;
 
-
+        
         public LoginViewModel(LoginWin loginWin)
         {
             this.loginWin = loginWin;
@@ -63,6 +63,7 @@ namespace TT
                 {
                     MainWin win = new MainWin();
                     win.Show();
+                    MainWinViewModel model = new MainWinViewModel(login, win);
                     this.loginWin.Close();
                 }));
             }

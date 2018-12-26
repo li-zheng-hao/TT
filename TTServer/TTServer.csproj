@@ -79,10 +79,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\DAO\AccountDAO.cs" />
+    <Compile Include="DB\DAO\FriendDAO.cs" />
     <Compile Include="DB\DBHelper.cs" />
+    <Compile Include="DB\Model\Friend.cs" />
     <Compile Include="DB\Model\Account.cs" />
+    <Compile Include="Handler\AddFriendHandler.cs" />
     <Compile Include="Handler\IHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
+    <Compile Include="Handler\GetFriendHandler.cs" />
     <Compile Include="Handler\RegisterHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,7 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="TTServer_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">

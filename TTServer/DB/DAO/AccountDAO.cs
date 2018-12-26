@@ -36,12 +36,13 @@ namespace TTServer
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
+                    int id = reader.GetInt32(0);
                     string username = reader.GetString(1);
                     Console.WriteLine($"查询成功，当前查询用户名为{username}");
                     string newemail = reader.GetString(3);
                     string newphone = reader.GetString(4);
                     Account user = new Account()
-                    { UserName = username, Password = password, Email = email, Phone = newphone };
+                    { UserName= username, Password = password, Email = email, Phone = newphone ,Id=id};
                     reader?.Close();
                     return user;
                 }
@@ -124,6 +125,95 @@ namespace TTServer
                 command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = account.Phone;
 
                 return command.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            finally
+            {
+                DBHelper.CloseConnection(conn);
+            }
+        }
+        public Account GetAccountById(SqlConnection conn,int id)
+        {
+            string sqlStr = string.Empty;
+            SqlCommand command = new SqlCommand(sqlStr, conn);
+            try
+            {
+                sqlStr = "select * from Account where id=@id";
+                command.CommandText = sqlStr;
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    string username = reader.GetString(1);
+                    Console.WriteLine($"查询成功，当前查询用户名为{username}");
+                    string password = reader.GetString(2);
+                    string newemail = reader.GetString(3);
+                    string newphone = reader.GetString(4);
+                    Account user = new Account()
+                    { UserName = username, Password = password, Email = newemail, Phone = newphone };
+                    return user;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            finally
+            {
+                DBHelper.CloseConnection(conn);
+            }
+        }
+
+        public int GetAccountIdByEmail(SqlConnection conn,string email)
+        {
+            string sqlStr = string.Empty;
+            SqlCommand command = new SqlCommand(sqlStr, conn);
+            try
+            {
+                sqlStr = "select * from Account where emial=@email";
+                command.CommandText = sqlStr;
+                command.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    return reader.GetInt32(0);
+                }
+
+                return -1;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            finally
+            {
+                DBHelper.CloseConnection(conn);
+            }
+        }
+        public int GetAccountByByPhone(SqlConnection conn,string phone)
+        {
+            string sqlStr = string.Empty;
+            SqlCommand command = new SqlCommand(sqlStr, conn);
+            try
+            {
+                sqlStr = "select * from Account where phone=@phone";
+                command.CommandText = sqlStr;
+                command.Parameters.Add("@phone", SqlDbType.NVarChar).Value = phone;
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    return reader.GetInt32(0);
+                }
+
+                return -1;
             }
             catch (Exception e)
             {

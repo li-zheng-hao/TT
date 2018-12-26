@@ -149,7 +149,6 @@ namespace Core
                 throw;
             }
 
-            //todo 这里需要对所有对这个消息注册的代理进行通知
             
             
         }

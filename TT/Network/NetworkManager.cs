@@ -17,6 +17,7 @@ namespace TT
 
         public Action<IMessage> LoginCallBack;
         public Action<IMessage> RegisterCallBack;
+        public Action<IMessage> GetFriendListCallBack;
         #endregion
 
         private void OnRead(ushort opCode, MemoryStream messageStream, Session session)
@@ -28,6 +29,15 @@ namespace TT
                     break;
                 case OperationCode.Register:
                     new RegisterHandler().HandlerMessage(messageStream,session);
+                    break;
+                case OperationCode.GetFriendList:
+                    new GetFriendListHandler().HandlerMessage(messageStream, session);
+                    break;
+                case OperationCode.AddFriend:
+                    new AddFriendHandler().HandlerMessage(messageStream, session);
+                    break;
+                default:
+                    MessageBox.Show($"无法处理消息{opCode}");
                     break;
             }
             

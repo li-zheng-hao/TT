@@ -12,6 +12,8 @@ namespace Core
         public const ushort Register=2;
         public const ushort Error=3;
         public const ushort Response = 4;
+        public const ushort GetFriendList = 5;
+        public const ushort AddFriend = 6;
 
     }
 }

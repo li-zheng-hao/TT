@@ -81,11 +81,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Network\Handler\AddFriendHandler.cs" />
+    <Compile Include="Network\Handler\GetFriendListHandler.cs" />
     <Compile Include="Network\Handler\IHandler.cs" />
     <Compile Include="Network\Handler\LoginHandler.cs" />
     <Compile Include="Network\Handler\RegisterHandler.cs" />
     <Compile Include="Network\NetworkManager.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\MainWinViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />
     <Compile Include="Window\ChatWin.xaml.cs">
       <DependentUpon>ChatWin.xaml</DependentUpon>
@@ -123,7 +126,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Resource Include="Resources\wryh.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -148,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

@@ -17,7 +17,7 @@ namespace Core
     public class FriendListMessage:IMessage
     {
         [ProtoMember(1)]
-        public string OwnerId;
+        public int OwnerId;
         [ProtoMember(2)]
         public List<Friend> Friends;
         

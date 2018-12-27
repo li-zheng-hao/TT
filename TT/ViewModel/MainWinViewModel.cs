@@ -34,6 +34,7 @@ namespace TT
         
         private  void OnInit()
         {
+            
             Win.AddFriendBtn.Click +=ButtonBase_OnClickAsync;
             Win.DataContext = User;
             FriendListMessage msg = new FriendListMessage()

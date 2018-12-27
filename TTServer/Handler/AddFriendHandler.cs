@@ -17,7 +17,7 @@ namespace TTServer
             var id=accountDAO.GetAccountIdByEmail(DBHelper.Instance.GetConnection(), addFriend.FriendEmail);
             FriendDAO friendDAO = new FriendDAO();
             var result=friendDAO.InsertFriend(DBHelper.Instance.GetConnection(), addFriend.OwnerId, id);
-            ms
+            
         }
 
         public void ResponseMessage(IMessage msg, Session session)

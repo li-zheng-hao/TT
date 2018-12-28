@@ -107,18 +107,14 @@
                         </Grid.RowDefinitions>
                         <ListBox
                             x:Name="FriendsList"
-                            ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                            >
                             <ListBox.ItemTemplate>
                                 <ItemContainerTemplate>
-                                    <Grid>
-                                        <Button
-                                            Content="{iconPacks:FontAwesome UserFriendsSolid}" />
-                                        <TextBlock
-                                            Text="{Binding UserName}" />
-                                    </Grid>
+                                    <TextBlock
+                                        Text="{Binding UserName}" />
                                 </ItemContainerTemplate>
                             </ListBox.ItemTemplate>
-                            <ListBoxItem />
                         </ListBox>
                         <materialDesign:ColorZone
                             Grid.Row="1"

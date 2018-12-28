@@ -87,6 +87,7 @@
     <Compile Include="Network\Handler\LoginHandler.cs" />
     <Compile Include="Network\Handler\RegisterHandler.cs" />
     <Compile Include="Network\NetworkManager.cs" />
+    <Compile Include="ViewModel\ChatViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainWinViewModel.cs" />
     <Compile Include="ViewModel\RegisterViewModel.cs" />

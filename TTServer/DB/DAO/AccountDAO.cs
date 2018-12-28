@@ -177,7 +177,7 @@ namespace TTServer
             SqlCommand command = new SqlCommand(sqlStr, conn);
             try
             {
-                sqlStr = "select * from Account where emial=@email";
+                sqlStr = "select * from Account where email=@email";
                 command.CommandText = sqlStr;
                 command.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
                 var reader = command.ExecuteReader();

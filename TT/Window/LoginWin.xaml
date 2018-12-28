@@ -80,7 +80,8 @@
                 Margin="50,20,50,0"
                 BorderThickness="1"
                 Content="登 录"
-                Style="{DynamicResource AccentedSquareButtonStyle}" />
+                Style="{DynamicResource AccentedSquareButtonStyle}">
+            </Button>
             <Button
                 x:Name="RegisterBtn"
                 Width="150"

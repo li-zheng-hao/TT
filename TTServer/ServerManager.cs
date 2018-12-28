@@ -72,6 +72,9 @@ namespace TTServer
                 case OperationCode.GetFriendList:
                     new GetFriendHandler().HandleMessage(message, session);
                     break;
+                case OperationCode.AddFriend:
+                    new AddFriendHandler().HandleMessage(message, session);
+                    break;
                 default:
                     Console.WriteLine($"没有办法处理操作码{opCode}");
                     break;

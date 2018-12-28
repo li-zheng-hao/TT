@@ -18,6 +18,7 @@ namespace TT
         public Action<IMessage> LoginCallBack;
         public Action<IMessage> RegisterCallBack;
         public Action<IMessage> GetFriendListCallBack;
+        public Action<IMessage> AddFriendCallBack;
         #endregion
 
         private void OnRead(ushort opCode, MemoryStream messageStream, Session session)

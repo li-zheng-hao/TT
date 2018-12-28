@@ -135,9 +135,6 @@ namespace Core
         {
             memoryStream.Seek(Packet.MessageIndex, SeekOrigin.Begin);
             ushort opcode = BitConverter.ToUInt16(memoryStream.GetBuffer(), Packet.OpcodeIndex);
-
-
-            IMessage message;
             try
             {
                 memoryStream.Seek(2, SeekOrigin.Begin);

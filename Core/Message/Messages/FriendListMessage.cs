@@ -6,11 +6,11 @@ namespace Core
     public class Friend
     {
         [ProtoMember(1)]
-        public string UserName;
+        public string UserName { get; set; }
         [ProtoMember(2)]
-        public string Phone;
+        public string Phone { get; set; }
         [ProtoMember(3)]
-        public string Email;
+        public string Email { get; set; }
     }
 
     [ProtoContract]
@@ -20,6 +20,11 @@ namespace Core
         public int OwnerId;
         [ProtoMember(2)]
         public List<Friend> Friends;
+
+        public FriendListMessage()
+        {
+            Friends = new List<Friend>();
+        }
         
     }
 }

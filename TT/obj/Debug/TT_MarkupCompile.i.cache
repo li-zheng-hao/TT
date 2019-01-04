@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\TT\TT\App.xaml
-4-1724782774
+6-1185055263
 
-22554371209
+24-564596517
 211875266064
-Window\ChatWin.xaml;Window\LoginWin.xaml;Window\MainWin.xaml;Window\RegisterWin.xaml;
+Controls\Friend\ChatListControl.xaml;Controls\Friend\ChatListItemControl.xaml;Window\ChatWin.xaml;Window\LoginWin.xaml;Window\MainWin.xaml;Window\RegisterWin.xaml;
 
-False
+True
 

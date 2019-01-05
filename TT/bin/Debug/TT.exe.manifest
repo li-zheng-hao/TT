@@ -162,14 +162,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TT.exe" size="53248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TT.exe" size="52736">
       <assemblyIdentity name="TT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ibwor7vEUm/b0dXaTbkXTSjBhihvE0v5/iYdWR17sgY=</dsig:DigestValue>
+        <dsig:DigestValue>pCRe+51trL37W2aYhyhFe4O+lCuvF3TK/2z9o/0RUl8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

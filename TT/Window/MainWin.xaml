@@ -105,117 +105,34 @@
                             <RowDefinition
                                 Height="Auto" />
                         </Grid.RowDefinitions>
-                        <TreeView ScrollViewer.VerticalScrollBarVisibility="Hidden">
-                            <materialDesign:TreeViewAssist.AdditionalTemplate>
-                                <DataTemplate>
-                                    <materialDesign:ColorZone
-                                        Mode="PrimaryLight"
-                                        CornerRadius="6">
-                                        <TextBlock
-                                            FontSize="10"
-                                            Margin="8 1 8 1"
-                                            FontStyle="Italic">
-                       8 个好友
-                                        </TextBlock>
-                                    </materialDesign:ColorZone>
-                                </DataTemplate>
-                            </materialDesign:TreeViewAssist.AdditionalTemplate>
+                        <TreeView x:Name="Tree"
+                            ScrollViewer.VerticalScrollBarVisibility="Hidden">
                             <TreeViewItem
                                 Header="我的好友"
+                                x:Name="Friend"
                                 FontFamily="Microsoft YaHei UI"
                                 FontWeight="Bold"
                                 FontStyle="Normal">
-                                <TreeViewItem
-                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
-                                    <TreeViewItem.Header>
+                                <TreeViewItem.ItemTemplate>
+                                    <DataTemplate>
                                         <StackPanel
                                             Orientation="Horizontal">
                                             <materialDesign:PackIcon
+                                                Margin="0 0 10 0"
                                                 Kind="Qqchat" />
-                                            <TextBlock>测试人员</TextBlock>
-
+                                            <TextBlock Text="{Binding UserName}"></TextBlock>
+    
                                         </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-                                <TreeViewItem
-                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
-                                    <TreeViewItem.Header>
-                                        <StackPanel
-                                            Orientation="Horizontal">
-                                            <materialDesign:PackIcon
-                                                Kind="Qqchat" />
-                                            <TextBlock>测试人员</TextBlock>
-
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-                                <TreeViewItem
-                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
-                                    <TreeViewItem.Header>
-                                        <StackPanel
-                                            Orientation="Horizontal">
-                                            <materialDesign:PackIcon
-                                                Kind="Qqchat" />
-                                            <TextBlock>测试人员</TextBlock>
-
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-                                <TreeViewItem
-                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
-                                    <TreeViewItem.Header>
-                                        <StackPanel
-                                            Orientation="Horizontal">
-                                            <materialDesign:PackIcon
-                                                Kind="Qqchat" />
-                                            <TextBlock>测试人员</TextBlock>
-
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-                                <TreeViewItem
-                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
-                                    <TreeViewItem.Header>
-                                        <StackPanel
-                                            Orientation="Horizontal">
-                                            <materialDesign:PackIcon
-                                                Kind="Qqchat" />
-                                            <TextBlock>测试人员</TextBlock>
-
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-                                <TreeViewItem
-                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
-                                    <TreeViewItem.Header>
-                                        <StackPanel
-                                            Orientation="Horizontal">
-                                            <materialDesign:PackIcon
-                                                Kind="Qqchat" />
-                                            <TextBlock>测试人员</TextBlock>
-
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-                                <TreeViewItem
-                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
-                                    <TreeViewItem.Header>
-                                        <StackPanel
-                                            Orientation="Horizontal">
-                                            <materialDesign:PackIcon
-                                                Kind="Qqchat" />
-                                            <TextBlock>测试人员</TextBlock>
-
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-
+                                    </DataTemplate>
+                                </TreeViewItem.ItemTemplate>
+                                
                             </TreeViewItem>
                             <TreeViewItem
                                 Header="我的家人"
                                 FontFamily="Microsoft YaHei UI"
                                 FontWeight="Bold"
                                 FontStyle="Normal">
+                                
                                 <TreeViewItem
                                     materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
                                     <TreeViewItem.Header>
@@ -312,24 +229,14 @@
                                 FontFamily="Microsoft YaHei UI"
                                 FontWeight="Bold"
                                 FontStyle="Normal">
+
                                 <TreeViewItem
                                     materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
                                     <TreeViewItem.Header>
                                         <StackPanel
                                             Orientation="Horizontal">
                                             <materialDesign:PackIcon
-                                                Kind="Qqchat" />
-                                            <TextBlock>测试人员</TextBlock>
-                                            
-                                        </StackPanel>
-                                    </TreeViewItem.Header>
-                                </TreeViewItem>
-                                <TreeViewItem
-                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
-                                    <TreeViewItem.Header>
-                                        <StackPanel
-                                            Orientation="Horizontal">
-                                            <materialDesign:PackIcon
+                                                Margin="0 0 10 0"
                                                 Kind="Qqchat" />
                                             <TextBlock>测试人员</TextBlock>
 
@@ -342,6 +249,7 @@
                                         <StackPanel
                                             Orientation="Horizontal">
                                             <materialDesign:PackIcon
+                                                Margin="0 0 10 0"
                                                 Kind="Qqchat" />
                                             <TextBlock>测试人员</TextBlock>
 
@@ -354,6 +262,7 @@
                                         <StackPanel
                                             Orientation="Horizontal">
                                             <materialDesign:PackIcon
+                                                Margin="0 0 10 0"
                                                 Kind="Qqchat" />
                                             <TextBlock>测试人员</TextBlock>
 
@@ -366,6 +275,7 @@
                                         <StackPanel
                                             Orientation="Horizontal">
                                             <materialDesign:PackIcon
+                                                Margin="0 0 10 0"
                                                 Kind="Qqchat" />
                                             <TextBlock>测试人员</TextBlock>
 
@@ -378,6 +288,7 @@
                                         <StackPanel
                                             Orientation="Horizontal">
                                             <materialDesign:PackIcon
+                                                Margin="0 0 10 0"
                                                 Kind="Qqchat" />
                                             <TextBlock>测试人员</TextBlock>
 
@@ -390,6 +301,20 @@
                                         <StackPanel
                                             Orientation="Horizontal">
                                             <materialDesign:PackIcon
+                                                Margin="0 0 10 0"
+                                                Kind="Qqchat" />
+                                            <TextBlock>测试人员</TextBlock>
+
+                                        </StackPanel>
+                                    </TreeViewItem.Header>
+                                </TreeViewItem>
+                                <TreeViewItem
+                                    materialDesign:TreeViewAssist.AdditionalTemplate="{x:Static materialDesign:TreeViewAssist.SuppressAdditionalTemplate}">
+                                    <TreeViewItem.Header>
+                                        <StackPanel
+                                            Orientation="Horizontal">
+                                            <materialDesign:PackIcon
+                                                Margin="0 0 10 0"
                                                 Kind="Qqchat" />
                                             <TextBlock>测试人员</TextBlock>
 
@@ -398,7 +323,7 @@
                                 </TreeViewItem>
 
                             </TreeViewItem>
-                           
+
                         </TreeView>
 
                         <materialDesign:ColorZone

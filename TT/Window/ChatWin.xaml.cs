@@ -9,6 +9,7 @@ namespace TT.Window
         public ChatWin()
         {
             InitializeComponent();
+            this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
     }
 }

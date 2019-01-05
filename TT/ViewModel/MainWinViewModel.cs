@@ -40,7 +40,7 @@ namespace TT
 
             Win.AddFriendBtn.Click += ButtonBase_OnClickAsync;
             Win.DataContext = User;
-            //Win.FriendsList.MouseDoubleClick += FriendsList_MouseDoubleClick;
+            Win.Tree.MouseDoubleClick += Tree_MouseDoubleClick;
             FriendListMessage msg = new FriendListMessage()
             {
                 OwnerId = User.Id,
@@ -52,6 +52,21 @@ namespace TT
 
         }
 
+        private void Tree_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            App.Current.Dispatcher.Invoke(() =>
+            {
+                var friend = Win.Tree.SelectedValue as Friend;
+
+                ChatWin win = new ChatWin();
+                
+                ChatViewModel chatViewModel = new ChatViewModel(win, friend);
+                win.Show();
+            });
+        }
+
+       
+
         /// <summary>
         /// 双击好友列表事件
         /// </summary>
@@ -59,13 +74,6 @@ namespace TT
         /// <param name="e"></param>
         private void FriendsList_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            App.Current.Dispatcher.Invoke(() =>
-            {
-                //Friend friend = Win.FriendsList.SelectedValue as Friend;
-                //ChatWin win = new ChatWin();
-                //ChatViewModel chatViewModel = new ChatViewModel(win, friend);
-                //win.Show();
-            });
            
             
         }
@@ -102,7 +110,7 @@ namespace TT
                 App.Current.Dispatcher.Invoke((Action)(() =>
                 {
                     FriendList = friend.Friends;
-                    //Win.FriendsList.ItemsSource = FriendList;
+                    Win.Friend.ItemsSource = FriendList;
                 }));
                 
             }

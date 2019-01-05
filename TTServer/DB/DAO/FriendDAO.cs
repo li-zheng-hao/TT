@@ -53,17 +53,28 @@ namespace TTServer
         /// <returns>插入成功返回true</returns>
         public bool InsertFriend(SqlConnection conn,int ownerid,int friendid)
         {
-            string sqlStr = string.Empty;
-            SqlCommand command = new SqlCommand(sqlStr, conn);
+            string sqlStr1 = string.Empty;
+            SqlCommand command1 = new SqlCommand(sqlStr1, conn);
+            string sqlStr2 = string.Empty;
+            SqlCommand command2 = new SqlCommand(sqlStr2, conn);
             try
             {
-                sqlStr = "insert into Friend values(@ownerid,@friendid)";
-                command.CommandText = sqlStr;
-                command.Parameters.Add("@ownerid", SqlDbType.Int).Value = ownerid;
-                command.Parameters.Add("@friendid", SqlDbType.Int).Value = friendid;
+                sqlStr1 = "insert into Friend values(@ownerid,@friendid)";
+                command1.CommandText = sqlStr1;
+                command1.Parameters.Add("@ownerid", SqlDbType.Int).Value = ownerid;
+                command1.Parameters.Add("@friendid", SqlDbType.Int).Value = friendid;
 
-                var result = command.ExecuteNonQuery();
-                return result == 1 ? true : false;
+                var result1 = command1.ExecuteNonQuery();
+
+                sqlStr2 = "insert into Friend values(@ownerid,@friendid)";
+                command2.CommandText = sqlStr2;
+                command2.Parameters.Add("@ownerid", SqlDbType.Int).Value = friendid;
+                command2.Parameters.Add("@friendid", SqlDbType.Int).Value = ownerid;
+
+                var result2 = command2.ExecuteNonQuery();
+
+                return result1==1 && result2==1;
+
             }
             catch (Exception e)
             {
